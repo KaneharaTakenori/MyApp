@@ -15,7 +15,7 @@
   <% if @searchartists.present? %>
     <% @searchartists.each do |artist| %>
       <div>
-        <h3><%= link_to artist.name, artist_song_path(artist_id: artist.id) %></h3>
+        <h3><%= link_to artist.name, artist_song_path(artist.id) %></h3>
         <% if artist.images.any? %>
           <%= image_tag(artist.images[0]["url"]) %>
         <% end %>
