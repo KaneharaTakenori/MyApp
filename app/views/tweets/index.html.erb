@@ -1,0 +1,23 @@
+<h1>GeekTwitter</h1>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<h3>Tweet一覧</h3>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+  <div class="tweet">
+    <h2><%= link_to t.track_name, tweet_path(t) %></h2>
+    <p>アーティスト: <%= link_to t.artist_name, artist_songs_path(artist_id: t.artist_id) %></p>
+    <p>アルバム: <%= link_to t.album_name,     album_songs_path(album_id: t.album_id)   %></p>
+    <p>コメント: <%= t.comment %></p>
+    <% if t.album_image.present? %>
+      <%= image_tag t.album_image %>
+    <% end %>
+    <%= link_to "詳細へ", tweet_path(t.id) %>
+    <%= link_to "編集する", edit_tweet_path(t.id) %>
+    <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+    <% if t.youtube_url.present? %>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <% end %>
+  </div>
+  <% end %>
+</div>
