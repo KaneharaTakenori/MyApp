@@ -197,6 +197,7 @@ GEM
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
+    pg (1.5.9)
     psych (5.2.2)
       date
       stringio
@@ -321,6 +322,7 @@ DEPENDENCIES
   dotenv-rails
   importmap-rails
   jbuilder
+  pg (~> 1.5.9)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rspotify
