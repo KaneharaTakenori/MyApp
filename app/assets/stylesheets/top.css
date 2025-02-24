@@ -1,0 +1,74 @@
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 140px;
+    transition-timing-function: linear;
+}
+  
+.swiper-wrapper {
+    transition-timing-function: linear;
+    display: flex; 
+}
+  
+.swiper-slide {
+    text-align: center;
+    width: auto;
+}
+  
+.album-cover {
+    width: 360px; 
+    height: auto; 
+    gap: 30px;
+    border-radius: 4px; 
+    object-fit: cover;
+}
+
+.top-text{
+    color: #D0FF5F;
+    position: relative;
+    padding: 100px 20px;
+    border-radius: 10px;
+}
+
+.explain{
+    font-size: 30px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-align: center;
+    line-height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explain::before,
+.explain::after {
+    width: 5px;
+    height: 160px;
+    background-color: #FF69B4;
+    content: '';
+}
+
+.explain::before {
+    transform: rotate(-35deg);
+    margin-right: 30px;
+}
+
+.explain::after {
+    transform: rotate(35deg);
+    margin-left: 30px;
+}
+
+.top-button{
+    text-align: center;
+    margin: 30px;
+}
+
+.top-container{
+    content: "";
+    position: absolute;
+    height: 50%;
+    background-color: #280148;
+    width: 100%;
+    z-index: -1;
+}

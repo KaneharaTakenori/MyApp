@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geektwitter2</title>
+    <title>Geektwitter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Find Your Sound</h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "HOME", hello_index_path %></li>
+        <li><%= link_to "新規投稿",new_user_registration_path %></li>
+        <li><%= link_to "MUSIC", search_songs_path %></li>
+        <li><%= link_to "診断",question1_tweets_path %></li>
+      </ul>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

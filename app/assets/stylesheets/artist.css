@@ -1,0 +1,21 @@
+.search{
+    margin-top: 10%;
+    text-align: center;
+    justify-content: center;
+    line-height: 180%;
+}
+
+.album{
+    margin-top: 10%;
+    margin-left: 15%;
+    color: #FFFFFF;
+}
+.album a{
+    color: #D0FF5F;
+}
+
+.artist{
+    margin-top: 10%;
+    text-align: center;
+    justify-content: center;
+}

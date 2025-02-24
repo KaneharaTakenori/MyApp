@@ -1,0 +1,43 @@
+<div class="recommend">
+  "Recommended for You！"
+</div>
+
+<div id="tweets">
+  <% @tweets.each do |t| %>
+    <% if params[:answer] == t.result %>
+        <div class="tweet">
+    <div class="artistname"> 
+      <%= link_to t.artist_name, artist_song_path(t.artist_id) %>
+    </div>
+    <div class="track">
+      <%= link_to t.track_name, tweet_path(t) %>
+    </div>
+    <p1>アルバム: <%= link_to t.album_name,     album_song_path(t.album_id)   %></p>
+    <div class="comment"> 
+      <p1> <%= t.comment %></p>
+      <% if t.album_image.present? %>
+        <%= image_tag t.album_image ,class:"albumsize"%>
+      <% end %>
+      <br>
+        <%= link_to "詳細へ", tweet_path(t.id) %>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+        <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+      </br>
+    </div>
+    <div class="video-container">
+      <% if t.youtube_url.present? %>
+        <iframe width="500" height="320" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+    </div>
+    <div class="video-container2">
+      <% if t.youtube_url2.present? %>
+        <iframe width="280" height="154" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url2) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+      <% if t.youtube_url3.present? %>
+        <iframe width="280" height="154" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url3) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %>
+    </div>
+  </div>
+    <% end %>
+  <% end %>
+</div>

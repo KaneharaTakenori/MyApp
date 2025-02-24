@@ -5,6 +5,9 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
   end
+  def result
+    @tweets = Tweet.all
+  end
   def new
     @tweet = Tweet.new
     @track = RSpotify::Track.find(params[:track_id]) if params[:track_id]
@@ -45,7 +48,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:body,:youtube_url,:artist_name, :album_name, :track_name, :album_image, :preview_url, :artist_id, :album_id, :comment)
+    params.require(:tweet).permit(:body, :youtube_url, :youtube_url2, :youtube_url3, :artist_name, :album_name, :track_name, :album_image, :preview_url, :artist_id, :album_id, :comment, :result)
   end
 
 

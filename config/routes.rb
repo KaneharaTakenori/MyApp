@@ -7,6 +7,7 @@ devise_for :user
       get "question1"
       get "question2"
       get "question3"
+      get "question4"
       get "result"
     end
   end

@@ -10,5 +10,7 @@ class AddYoutubeUrlToTweets < ActiveRecord::Migration[7.1]
     add_column :tweets, :album_id, :string
     add_column :tweets, :result, :string
     add_column :tweets, :comment, :text
+    add_column :tweets, :youtube_url2, :string
+    add_column :tweets, :youtube_url3, :string
   end
 end

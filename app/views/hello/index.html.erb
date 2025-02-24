@@ -1,2 +1,56 @@
-<%= link_to "ログイン", tweets_path %>
-<%= link_to "新規登録", new_user_registration_path %>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @albums.each_with_index do |album, n| %>
+      <div class="swiper-slide">
+        <%= link_to album_song_path(album.id) do %>
+        <img src="<%= album.images.first['url'] %>" alt="<%= album.name %>" class="album-cover">
+       <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- Swiper.js のスクリプト -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" data-turbo="false"></script>
+<script>
+  document.addEventListener("turbo:load", function() {
+    let swiperContainer = document.querySelector(".swiper-container");
+
+    if (!swiperContainer) return; // swiper-container がない場合は何もしない
+    if (window.swiperInstance) {
+      window.swiperInstance.destroy();
+    }
+    window.swiperInstance = new Swiper(".swiper-container", {
+      slidesPerView: 'auto', // 1行に表示するスライド数
+      spaceBetween: 20, // スライド間の間隔
+      loop: true,
+      speed: 5400, // ループの時間
+      loopedSlides: <%= @albums.length %>, // ループ時に正しくスライドを扱う
+      autoplay: {
+        delay: 0,
+      }
+    });
+  });
+</script>
+
+
+<div class="top-text">
+    <div class="explain">
+        ここは、新たな音楽と出会うことができる場所です！
+        <br>診断では、いくつかの質問に答えるだけで、
+        <br>あなたにぴったりの洋楽が見つかります！</br>
+    </div>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    <div class="top-button">
+        <a href="/tweets/question1" class="btn btn--moderntop">診断<br>スタート</a>
+    </div>
+
+</div>
+
+<div class="top-container">
+</div>
+
+

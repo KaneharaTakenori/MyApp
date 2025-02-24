@@ -1,5 +1,21 @@
-<%= form_for @tweet do |f| %>
-    <%= f.label :body %>
-    <%= f.text_field :body, :size => 140 %> 
-    <%= f.submit "編集する" %>
-  <% end %>
+<%= form_for @tweet do |form| %>
+    <%= form.label :body %>
+    <%= form.text_field :body, :size => 200 %> 
+    <div>
+    <%= form.label :comment, "コメント" %>
+    <%= form.text_area :comment %>
+  </div>
+  <div>
+    <%= form.label :result, "結果" %>
+    <%= form.text_field :result %>
+  </div>
+  <div>
+    <%= form.label :youtube_url, "youtube" %>
+    <%= form.text_field :youtube_url %>
+    <%= form.label :youtube_url2, "youtube" %>
+    <%= form.text_field :youtube_url2 %>
+    <%= form.label :youtube_url3, "youtube" %>
+    <%= form.text_field :youtube_url3 %>
+  </div>
+    <%= form.submit "編集する" %>
+ <% end %>

@@ -33,6 +33,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_10_142442) do
     t.string "album_id"
     t.string "result"
     t.text "comment"
+    t.string "youtube_url2"
+    t.string "youtube_url3"
   end
 
   create_table "users", force: :cascade do |t|

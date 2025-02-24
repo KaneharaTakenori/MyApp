@@ -6,8 +6,8 @@
   <% @tweets.each do |t| %>
   <div class="tweet">
     <h2><%= link_to t.track_name, tweet_path(t) %></h2>
-    <p>アーティスト: <%= link_to t.artist_name, artist_songs_path(artist_id: t.artist_id) %></p>
-    <p>アルバム: <%= link_to t.album_name,     album_songs_path(album_id: t.album_id)   %></p>
+    <p>アーティスト: <%= link_to t.artist_name, artist_song_path(t.artist_id) %></p>
+    <p>アルバム: <%= link_to t.album_name,     album_song_path(t.album_id)   %></p>
     <p>コメント: <%= t.comment %></p>
     <% if t.album_image.present? %>
       <%= image_tag t.album_image %>

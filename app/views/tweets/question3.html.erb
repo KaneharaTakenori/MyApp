@@ -1,21 +1,39 @@
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+
+
 <% if params[:answer] == "C" %>
-    <h1>Cを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/tweets/result?answer=あ">オススメ１結果を見る</a>
-    <a href="/tweets/result?answer=い">オススメ２結果を見る</a>
+    <div class="question">
+      Q3 初対面の人たちとグループになったとき
+    </div>
+    <div class="answer">
+      <a href="/tweets/question4?answer=G" class="btn btn--modern">自分から話しかける</a>
+      <a href="/tweets/question4?answer=H" class="btn btn--modern2">話しかけられるのを待つ</a>
+    </div>
 <% elsif params[:answer] == "D" %>
-    <h1>Dを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/tweets/result?answer=う">オススメ３結果を見る</a>
-    <a href="/tweets/result?answer=え">オススメ４結果を見る</a>
+    <div class="question">
+       Q3 初対面の人たちとグループになったとき
+    </div>
+    <div class="answer">
+      <a href="/tweets/question4?answer=I" class="btn btn--modern">自分から話しかける</a>
+      <a href="/tweets/question4?answer=J" class="btn btn--modern2">話しかけられるのを待つ</a>
+    </div>
 <% elsif params[:answer] == "E" %>
-    <h1>Eを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/tweets/result?answer=お">オススメ５結果を見る</a>
-    <a href="/tweets/result?answer=か">オススメ６結果を見る</a>
+    <div class="question">
+      Q3 初対面の人たちとグループになったとき
+    </div>
+    <div class="answer">
+      <a href="/tweets/question4?answer=K" class="btn btn--modern">自分から話しかける</a>
+      <a href="/tweets/question4?answer=L" class="btn btn--modern2">話しかけられるのを待つ</a>
+    </div>
 <% elsif params[:answer] == "F" %>
-    <h1>Fを選んだあなた</h1>
-    <h2>最終質問</h2>
-    <a href="/tweets/result?answer=き">オススメ７結果を見る</a>
-    <a href="/tweets/result?answer=く">オススメ８結果を見る</a>
+    <div class="question">
+      Q3 初対面の人たちとグループになったとき
+    </div>
+    <div class="answer">
+      <a href="/tweets/question4?answer=M" class="btn btn--modern">自分から話しかける</a>
+      <a href="/tweets/question4?answer=N" class="btn btn--modern2">話しかけられるのを待つ</a>
+    </div>
 <% end %>

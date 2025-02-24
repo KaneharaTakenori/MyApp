@@ -1,11 +1,25 @@
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+    
+
 <% if params[:answer] == "A" %>
-    <h1>Aを選んだあなた</h1>
-    <h2>質問その2</h2>
-    <a href="/tweets/question3?answer=C">Cを選ぶ</a>
-    <a href="/tweets/question3?answer=D">Dを選ぶ</a>
+
+    <div class="question">
+      Q2 課題は締切ギリギリなことが多い
+    </div>
+    <div class="answer">
+      <a href="/tweets/question3?answer=C" class="btn btn--modern">はい</a>
+      <a href="/tweets/question3?answer=D" class="btn btn--modern2">いいえ</a>
+    </div>
 <% elsif params[:answer] == "B" %>
-    <h1>Bを選んだあなた</h1>
-    <h2>質問その2</h2>
-    <a href="/tweets/question3?answer=E">Eを選ぶ</a>
-    <a href="/tweets/question3?answer=F">Fを選ぶ</a>
+
+    <div class="question">
+      Q2 課題は締切ギリギリなことが多い
+    </div>
+    <div class="answer">
+      <a href="/tweets/question3?answer=E" class="btn btn--modern">はい</a>
+      <a href="/tweets/question3?answer=F" class="btn btn--modern2">いいえ</a>
+    </div>
 <% end %>

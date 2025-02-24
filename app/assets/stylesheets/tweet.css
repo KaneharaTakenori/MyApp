@@ -1,0 +1,99 @@
+.recommend{
+    text-decoration:underline;
+    text-decoration-color: #D0FF5F;
+    text-underline-offset: 20%;
+    position: relative;
+    padding: .3em 0 .2em 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 32px
+    
+}
+.recommend::before{
+    position: absolute;
+    top: 0;
+    left: .3em;
+    transform: rotate(55deg);
+    height: 15px;
+    width: 14px;
+    background: #D0FF5F;
+    content: '';
+}
+.recommend::after{
+    position: absolute;
+    transform: rotate(15deg);
+    top: .6em;
+    left: 0;
+    height: 11px;
+    width: 11px;
+    background: #D0FF5F;
+    content: '';
+}
+
+
+#tweets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 2%;
+}
+#tweets a{
+    text-decoration: none;
+    color: #2DCDA9;
+}
+
+.tweet {
+    background: #280148;
+    border: 5px #D0FF5F;
+    border-radius: 15px;
+    padding: 20px;
+    width: 1200px;
+    text-align: left;
+}
+  
+.artistname {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+.track {
+    font-size: 24px;
+}
+
+.track a{
+    pointer-events: none
+}
+
+.comment{
+    text-align: justify; 
+}
+
+.albumsize{
+    width: 320px;
+    height: auto;
+    margin-top: 1%;
+  }
+
+.tweet iframe {
+    border-radius: 8px; /* 角を丸くする */
+  }
+
+.video-container{
+    margin-left: 30%;
+    margin-top: -33%;
+
+}
+
+.video-container2{
+    margin-left: 75%;
+    margin-top: -27%;
+
+}

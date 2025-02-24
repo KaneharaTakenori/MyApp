@@ -1,0 +1,19 @@
+  
+.question {
+    color: #D0FF5F;
+    margin-top: 18%;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+  
+  
+.answer {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
