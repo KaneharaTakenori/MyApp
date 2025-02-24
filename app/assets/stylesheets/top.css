@@ -13,6 +13,7 @@
 .swiper-slide {
     text-align: center;
     width: auto;
+    transition-timing-function: linear;
 }
   
 .album-cover {

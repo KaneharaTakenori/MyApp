@@ -1,14 +1,87 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <% @albums.each_with_index do |album, n| %>
       <div class="swiper-slide">
-        <%= link_to album_song_path(album.id) do %>
-        <img src="<%= album.images.first['url'] %>" alt="<%= album.name %>" class="album-cover">
-       <% end %>
-      </div>
-    <% end %>
+  <a href="/songs/2ANVost0y2y52ema1E9xAZ/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273de437d960dda1ac0a3586d97" alt="Thriller" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/2UJcKiJxNryhL050F5Z1Fk/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273fbc71c99f9c1296c56dd51b6" alt="Nevermind (Remastered)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/0ETFjACtuP2ADo6LFhL6HN/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00cceb25" alt="Abbey Road (Remastered)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/4xwx0x7k6c5VuThz5qVqmV/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b27398260c528e6eec9dd431c1d7" alt="The Velvet Underground & Nico 45th Anniversary" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/5Dgqy4bBg09Rdw7CQM545s/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b27327cc8b0ed297111f53009772" alt="Unknown Pleasures" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/75ol9OP8bJaRqzGimpFHDm/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273da7b326bd7ffa7b6b95b0660" alt="In The Court Of The Crimson King (Expanded & Remastered Original Album Mix)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/2cUpAOlQjV5uSjkWj5bEQY/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273c32e12829fb960100a3257c6" alt="Atom Heart Mother" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/0NouBnbXRJKFWzm9LwCW0K/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273b57713d0fe3553a087419f8f" alt="Queen II (2011 Remaster)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/29f2cOueckYE8Nc1pkJjrU/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273de0391ae05929bfe0e952f6b" alt="There's a Riot Goin' On" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/6YUCc2RiXcEKS9ibuZxjt0/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b2732fee61bfec596bb6f5447c50" alt="Songs In The Key Of Life" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/5EyIDBAqhnlkAHqvPRwdbX/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b2734509204d0860cc0cc67e83dc" alt="Led Zeppelin IV (Remaster)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/6QaVfG1pHYl1z15ZxkvVDW/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a" alt="Sgt. Pepper's Lonely Hearts Club Band (Remastered)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/6FCzvataOZh68j8OKzOt9a/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273cd9d8bc9ef04014b6e90e182" alt="London Calling (Remastered)" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/1BZoqf8Zje5nGdwZhOjAtD/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b273e08b1250db5f75643f1508c9" alt="The Miseducation of Lauryn Hill" class="album-cover">
+  </a>
+</div>
+<div class="swiper-slide">
+  <a href="/songs/3UsWuvyuXkospeI9nLdVem/album">
+    <img src="https://i.scdn.co/image/ab67616d0000b2736f253c0104f24caed5e3e42e" alt="(What's The Story) Morning Glory (Remastered, Deluxe)" class="album-cover">
+  </a>
+</div>
+
+      
+
   </div>
 </div>
+
+
 
 <!-- Swiper.js のスクリプト -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" data-turbo="false"></script>
@@ -25,7 +98,6 @@
       spaceBetween: 20, // スライド間の間隔
       loop: true,
       speed: 5400, // ループの時間
-      loopedSlides: <%= @albums.length %>, // ループ時に正しくスライドを扱う
       autoplay: {
         delay: 0,
       }
