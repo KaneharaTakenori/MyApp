@@ -46,6 +46,14 @@ class TweetsController < ApplicationController
     redirect_to action: :index
   end
 
+  def question1
+  end
+  def question2
+  end
+  def question3
+  end
+  def question4
+  end
   private
   def tweet_params
     params.require(:tweet).permit(:body, :youtube_url, :youtube_url2, :youtube_url3, :artist_name, :album_name, :track_name, :album_image, :preview_url, :artist_id, :album_id, :comment, :result)
