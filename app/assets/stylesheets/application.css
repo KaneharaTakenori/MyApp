@@ -23,7 +23,7 @@
 body {
   background-color: #3A066E;
   color: #D0FF5F;
-  font-family: "Arial" "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+  font-family: "Arial", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 body::before {
