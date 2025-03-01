@@ -1,8 +1,15 @@
 .swiper-container {
     width: 100%;
     overflow: hidden;
-    margin-top: 80px;
     transition-timing-function: linear;
+}
+
+.swiper-container.top {
+    margin-top: 20px; /* 上部のSwiperの間隔を調整 */
+}
+  
+.swiper-container.bottom {
+    margin-top: 5px;
 }
   
 .swiper-wrapper {
@@ -15,9 +22,10 @@
     width: auto;
     transition-timing-function: linear;
 }
+
   
 .album-cover {
-    width: 360px; 
+    width: 320px; 
     height: auto; 
     gap: px;
     border-radius: px; 
