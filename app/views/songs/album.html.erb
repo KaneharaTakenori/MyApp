@@ -1,25 +1,12 @@
 
 <div class="album">
-  <% if @album.present? %>
-    <h3><%= link_to @album.name, album_song_path(@album.id) %></h3>
-  <% else %>
-    <h3>アルバム情報がありません</h3>
-  <% end %>
-
-  <% if @album&.images&.any? %>
+  <% if @album.images.any? %>
     <%= image_tag(@album.images[0]["url"]) %>
-  <% else %>
-    <p>画像がありません</p>
   <% end %>
-
   <h2>トラックリスト</h2>
-  <% if @album&.tracks.present? %>
-    <% @album.tracks.each do |track| %>
-      <div>
-        <h3><%= track.track_number %>：<%= link_to track.name, song_path(track.id) %></h3>
-      </div>
-    <% end %>
-  <% else %>
-    <p>トラック情報がありません</p>
+  <% @album.tracks.each do |track| %>
+    <div>
+      <h3><%= track.track_number %>：<%= link_to track.name, song_path(track.id) %></h3>
+    </div>
   <% end %>
 </div>
