@@ -14,6 +14,11 @@ class SongsController < ApplicationController
 
   def show
     @track = RSpotify::Track.find(params[:id])
+    if @track.album.present?
+      @album = RSpotify::Album.find(@track.album.id)
+    else
+      @album = nil
+    end
   end
 
   def artist

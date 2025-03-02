@@ -6,9 +6,10 @@
 }
 
 .album{
+    margin-left: 25%;
     margin-top: 10%;
-    margin-left: 15%;
     color: #FFFFFF;
+
 }
 .album a{
     color: #D0FF5F;
@@ -19,3 +20,38 @@
     text-align: center;
     justify-content: center;
 }
+
+.text-field-custom {
+    width: 20%; /* 横幅いっぱいに */
+    height: 20px; /* 高さを適度に */
+    padding: 12px;
+    border: 2px solid #6a0dad; /* 枠線の色を紫系に */
+    border-radius: 10px; /* 角を丸く */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+}
+  
+.text-field-custom:focus {
+    outline: none;
+    border-color: #ff8c00; /* フォーカス時にオレンジ系に */
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+}
+  
+.styled-submit-button {
+    background: linear-gradient(135deg, #6a0dad, #ff8c00);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+  
+.styled-submit-button:hover {
+    background: linear-gradient(135deg, #ff8c00, #6a0dad);
+}
+  
